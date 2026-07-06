@@ -6,17 +6,21 @@ export class Player {
         this.name = name;
         this.number = number;
     }
-
+    returnName()
+    {
+        //Return Name and Jersey Number differentiate by Colon
+        return `${this.name}:${this.number}`;
+    }
     run() {
-        return `${this.name} is running...`;
+        return `${this.returnName()} is running...`;
     }
 
     pass(player) {
-        return `${this.name} is Passing to ${player.name}`;
+        return `${this.returnName()} is Passing to ${player.returnName()}`;
     }
 
     celebrate() {
-        return `${this.name} is celebrating...`;
+        return `${this.returnName()} is celebrating...`;
     }
 
     performAction() {
@@ -26,24 +30,24 @@ export class Player {
 
 export class Striker extends Player {
     performAction() {
-        return `${this.name} made good shot...`;
+        return `${this.returnName()} made good shot...`;
     }
 }
 
 export class MidFielder extends Player {
     performAction() {
-        return `${this.name} tackling goal...`;
+        return `${this.returnName()} tackling goal...`;
     }
 }
 
 export class Defender extends Player {
     performAction() {
-        return `${this.name} saving goal...`;
+        return `${this.returnName()} saving goal...`;
     }
 }
 
 export class GoalKeeper extends Player {
     performAction() {
-        return `${this.name} making long pass`;
+        return `${this.returnName()} making long pass`;
     }
 }
