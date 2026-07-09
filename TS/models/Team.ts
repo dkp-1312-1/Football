@@ -29,7 +29,7 @@ export class Team {
     }
 
     public getRandomMidFielder(): MidFielder {
-        const player = this.players[Math.floor(Math.random() * this.players.length)];
+        const player:Player = this.players[Math.floor(Math.random() * this.players.length)]!;
         
         if (player instanceof MidFielder) {
             return player;
