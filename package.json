@@ -1,0 +1,20 @@
+{
+  "name": "football",
+  "version": "1.0.0",
+  "description": "- For Running Javascript Code >node index.js",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dkp-1312-1/Football.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dkp-1312-1/Football/issues"
+  },
+  "homepage": "https://github.com/dkp-1312-1/Football#readme"
+}

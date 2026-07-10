@@ -77,7 +77,6 @@ export class Match {
                 }
             } else {
                 // Passing to another team player
-                console.log("pass");
                 this.makeAnnouncement(player.pass(anotherPlayer!));
             }
             
