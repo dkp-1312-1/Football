@@ -1,12 +1,13 @@
-import { GoalKeeper, Player } from "./Player.js";
+import { GoalKeeper, Player, MidFielder } from "./Player.js";
 import { Team } from "./Team.js";
 import { Commentator } from "./Commentator.js"; 
+import { HasBallState } from "../types.js";
 
 export class Match {
     public homeTeam: Team;
     public opponentTeam: Team;
     public commentator: Commentator;
-    public hasBall: 1 | 2; 
+    public hasBall: HasBallState; 
     public count: number;
 
     constructor(homeTeam: Team, opponentTeam: Team, commentator: Commentator) {
@@ -66,7 +67,7 @@ export class Match {
 
         if (Math.random() <= 0.7) {
             // Making Score by performing Special Action or Passing to another team player
-            let anotherPlayer = team.getRandomPlayer();
+            let anotherPlayer: Player = team.getRandomPlayer();
             
             if (Math.random() > 0.7) {
                 // Making Score by performing Special Action
@@ -88,7 +89,7 @@ export class Match {
             this.hasBall = this.hasBall === 2 ? 1 : 2;
             team = this.hasBall === 1 ? this.homeTeam : this.opponentTeam;
             
-            let anotherPlayer = team.getRandomMidFielder();
+            let anotherPlayer: MidFielder = team.getRandomMidFielder();
             this.makeAnnouncement(this.takenBy(anotherPlayer.returnName()));
             this.makeAnnouncement(anotherPlayer.performAction());
             

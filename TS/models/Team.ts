@@ -22,7 +22,7 @@ export class Team {
     }
     public displayTeam(): string {
         let info: string = "";
-        this.players.forEach(element => {
+        this.players.forEach((element: Player) => {
             info += `\n${element.name}:${element.number}`;
         });
         return info;

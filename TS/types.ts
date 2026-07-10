@@ -5,3 +5,5 @@ export type AllPlayers={
     goalkeepers:string[]
 }
 export type StringList=string[];
+
+export type HasBallState = 1 | 2;

@@ -1,4 +1,4 @@
-import {AllPlayers,StringList} from './defaults.types.js';
+import {AllPlayers,StringList} from '../types.js';
 export const TEAMS:StringList=["Red Team", "Blue Team","White Team","Green Team"];
 
 //selecting random player's name
